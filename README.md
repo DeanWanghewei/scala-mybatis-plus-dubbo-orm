@@ -1,6 +1,6 @@
-# 测试用Scala写spring-boot应用。并且orm 框架使用的是mybatis-plus. 并且使用dubbo RPC调用测试
+# Scala的spring-boot应用
 ## 项目目的
-- 使用Scala写spring-boot 应用。
+- 使用Scala写spring-boot 应用。并且orm 框架使用的是mybatis-plus. 并且使用dubbo RPC调用测试
 - orm 层使用mybatis-plus. 并且尝试使用mybatis-plus 代理的方法。
 - 使用dubbo 测试 scala Bean 的RPC调用的序列化与反序列化
 ## 项目方案
