@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: common-provider
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 100MB
+      maxRequestSize: 100MB
+  datasource:
+    druid:
+      filters: stat
+      max-active: 100
+      initial-size: 1
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 'x'
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: false
+      max-open-prepared-statements: 20
+      filter:
+        stat:
+          slow-sql-millis: 5000
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  servlet:
+    session:
+      timeout: 1800
+  tomcat:
+    uri-encoding: UTF-8
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

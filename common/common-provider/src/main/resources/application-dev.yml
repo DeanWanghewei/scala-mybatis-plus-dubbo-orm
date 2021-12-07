@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://192.168.239.235:3306/gaia_ops_platform?useUnicode=true&characterEncoding=utf8&useOldAliasMetadataBehavior=true&serverTimezone=Asia/Shanghai
+      username: root
+      password: Km@666888
+
+dubbo:
+  registry:
+    address: 192.168.241.3:2181
+    protocol: zookeeper
+  application:
+    name: common-provider

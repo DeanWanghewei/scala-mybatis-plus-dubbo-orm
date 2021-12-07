@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: common-consumer
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 100MB
+      maxRequestSize: 100MB
+server:
+  servlet:
+    session:
+      timeout: 1800
+  tomcat:
+    uri-encoding: UTF-8
