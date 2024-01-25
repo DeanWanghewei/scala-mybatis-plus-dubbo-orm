@@ -2,6 +2,7 @@ package org.deanwei.scala.mybatis.common.provider.service
 
 import com.baomidou.mybatisplus.extension.service.IService
 import org.deanwei.scala.mybatis.common.provider.entity.ConfigJobNotifierEntity
+import org.deanwei.scala.mybatis.common.provider.view.ConfigJobView
 
 /**
  * @description: some desc
@@ -18,5 +19,7 @@ trait ConfigJobNotifierService extends IService[ConfigJobNotifierEntity] {
    * @return 返回的实体信息
    */
   def selectById(id: Long): ConfigJobNotifierEntity
+
+  def selectByIdView(id:Long):ConfigJobView
 
 }

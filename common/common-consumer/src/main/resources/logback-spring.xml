@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <property name="LOG_FOLDER" value="/Users/deanwang/IdeaProjects/logs/common-provider" />
+    <property name="LOG_FOLDER" value="/Users/deanwang/IdeaProjects/logs/common-consumer" />
     <property name="LOG_PATTERN" value="%d{ISO8601} %-5level %t %class{36} %L %M -%X{R_ID}-%X{U_ID}-%X{S_ID}- %msg%xEx%n" />
 
     <!-- 控制台输出 -->

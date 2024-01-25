@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl
 import org.deanwei.scala.mybatis.common.provider.entity.ConfigJobNotifierEntity
 import org.deanwei.scala.mybatis.common.provider.mapper.ConfigJobNotifierMapper
 import org.deanwei.scala.mybatis.common.provider.service.ConfigJobNotifierService
+import org.deanwei.scala.mybatis.common.provider.view.ConfigJobView
+import org.springframework.beans.BeanUtils
 import org.springframework.stereotype.Service
 
 /**
@@ -22,5 +24,12 @@ class ConfigJobNotifierServiceImpl extends ServiceImpl[ConfigJobNotifierMapper, 
    */
   override def selectById(id: Long): ConfigJobNotifierEntity = {
     baseMapper.selectById(id)
+  }
+
+  override def selectByIdView(id: Long): ConfigJobView = {
+    val entity = baseMapper.selectByIdView(id)
+    val view = new ConfigJobView
+    BeanUtils.copyProperties(entity,view)
+    view
   }
 }

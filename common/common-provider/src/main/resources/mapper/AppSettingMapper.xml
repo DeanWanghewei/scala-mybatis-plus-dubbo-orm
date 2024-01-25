@@ -12,4 +12,15 @@
     </select>
 
 
+    <select id="selectByIdView" resultType="org.deanwei.scala.mybatis.common.provider.view.ConfigJobView">
+        select
+               *,
+               'weiwei' as user_name
+        from t_notifier_mapping
+        <where>
+            1=1
+            and id = #{id}
+        </where>
+    </select>
+
 </mapper>
